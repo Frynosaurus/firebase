@@ -42,6 +42,11 @@ class MainViewModel with ChangeNotifier {
         child: AddCharacterPage(),
       ),
     );
-    Navigator.push(context, pageRoute);
+    Navigator.push(context, pageRoute).then(
+      (value) {
+        _characters.clear();
+        _getCharacters();
+      },
+    );
   }
 }
