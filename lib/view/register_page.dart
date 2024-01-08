@@ -73,7 +73,7 @@ class RegisterPage extends StatelessWidget {
       listen: false,
     );
     return TextButton(
-      child: Text('Hesabınız Yok Mu? Hesap Oluşturun'),
+      child: const Text('Hesabınız Yok Mu? Hesap Oluşturun'),
       onPressed: () {
         viewModel.openLoginPage(context);
       },
