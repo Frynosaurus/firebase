@@ -13,7 +13,7 @@ class RegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Giriş Sayfası'),
+        title: const Text('Kayıt Sayfası'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -57,9 +57,10 @@ class RegisterPage extends StatelessWidget {
       listen: false,
     );
     return ElevatedButton(
-      child: const Text('Giriş Yap'),
+      child: const Text('Kayıt Ol'),
       onPressed: () {
         viewModel.register(
+          context,
           _emailController.text.trim(),
           _passwordController.text.trim(),
         );
@@ -73,7 +74,7 @@ class RegisterPage extends StatelessWidget {
       listen: false,
     );
     return TextButton(
-      child: const Text('Hesabınız Yok Mu? Hesap Oluşturun'),
+      child: const Text('Hesabınız Var Mı? Giriş Yapın'),
       onPressed: () {
         viewModel.openLoginPage(context);
       },

@@ -60,6 +60,7 @@ class LoginPage extends StatelessWidget {
       child: const Text('Giriş Yap'),
       onPressed: () {
         viewModel.login(
+          context,
           _emailController.text.trim(),
           _passwordController.text.trim(),
         );
@@ -73,7 +74,7 @@ class LoginPage extends StatelessWidget {
       listen: false,
     );
     return TextButton(
-      child: const Text('Hesabınız Var Mı? Giriş Yapın'),
+      child: const Text('Hesabınız Yok Mu? Hesap Oluşturun'),
       onPressed: () {
         viewModel.openRegisterPage(context);
       },
